@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const tasksSchema = new Schema({
+const notesSchema = new Schema({
   name: String,
   medic: String,
-  date: Number,
+  date: String,
   complaints: String
 });
 
-module.exports = User = mongoose.model('Tasks_info', tasksSchema);
+module.exports = Note = mongoose.model('Notes_info', notesSchema);
