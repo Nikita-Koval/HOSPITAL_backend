@@ -56,7 +56,7 @@ module.exports.register = async (req, res) => {
           })
       })
   } catch (e) {
-      // errorHandler(res, error);
+      errorHandler(res, error);
   }
   }
 }

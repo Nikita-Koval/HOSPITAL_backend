@@ -1,8 +1,9 @@
 const express = require('express');
+const passport = require('passport')
 const controller = require('../controllers/notes')
 const router = express.Router();
 
-router.get('/allNotes', controller.getAllNotes);
+router.get('/allNotes', passport.authenticate('jwt', {session: false}), controller.getAllNotes);
 //localhost:5000/api/notes/allNotes
 
 router.post('/createNote', controller.addNewNote);
